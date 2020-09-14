@@ -1,0 +1,12 @@
+/Users/nguyencong/Desktop/web/Web Development/ASP.NET Core/Reactivities/Persistence/bin/Debug/netstandard2.0/Persistence.deps.json
+/Users/nguyencong/Desktop/web/Web Development/ASP.NET Core/Reactivities/Persistence/bin/Debug/netstandard2.0/Persistence.dll
+/Users/nguyencong/Desktop/web/Web Development/ASP.NET Core/Reactivities/Persistence/bin/Debug/netstandard2.0/Persistence.pdb
+/Users/nguyencong/Desktop/web/Web Development/ASP.NET Core/Reactivities/Persistence/bin/Debug/netstandard2.0/Domain.dll
+/Users/nguyencong/Desktop/web/Web Development/ASP.NET Core/Reactivities/Persistence/bin/Debug/netstandard2.0/Domain.pdb
+/Users/nguyencong/Desktop/web/Web Development/ASP.NET Core/Reactivities/Persistence/obj/Debug/netstandard2.0/Persistence.csprojAssemblyReference.cache
+/Users/nguyencong/Desktop/web/Web Development/ASP.NET Core/Reactivities/Persistence/obj/Debug/netstandard2.0/Persistence.AssemblyInfoInputs.cache
+/Users/nguyencong/Desktop/web/Web Development/ASP.NET Core/Reactivities/Persistence/obj/Debug/netstandard2.0/Persistence.AssemblyInfo.cs
+/Users/nguyencong/Desktop/web/Web Development/ASP.NET Core/Reactivities/Persistence/obj/Debug/netstandard2.0/Persistence.csproj.CoreCompileInputs.cache
+/Users/nguyencong/Desktop/web/Web Development/ASP.NET Core/Reactivities/Persistence/obj/Debug/netstandard2.0/Persistence.csproj.CopyComplete
+/Users/nguyencong/Desktop/web/Web Development/ASP.NET Core/Reactivities/Persistence/obj/Debug/netstandard2.0/Persistence.dll
+/Users/nguyencong/Desktop/web/Web Development/ASP.NET Core/Reactivities/Persistence/obj/Debug/netstandard2.0/Persistence.pdb

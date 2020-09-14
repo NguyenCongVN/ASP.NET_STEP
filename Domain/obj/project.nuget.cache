@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "2t+mcbshbQUd5laDyV3Ak0HpYoGjwDrRNOaBY+8EhKWv7mc05Q+xiTp9/FvBU7TbKpfCviBMuZYOy7e+fF/gtQ==",
+  "success": true,
+  "projectFilePath": "/Users/nguyencong/Desktop/web/Web Development/ASP.NET Core/Reactivities/Domain/Domain.csproj",
+  "expectedPackageFiles": [
+    "/Users/nguyencong/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/nguyencong/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

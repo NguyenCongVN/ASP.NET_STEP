@@ -1,0 +1,9 @@
+/Users/nguyencong/Desktop/web/Web Development/ASP.NET Core/Reactivities/Domain/bin/Debug/netstandard2.0/Domain.deps.json
+/Users/nguyencong/Desktop/web/Web Development/ASP.NET Core/Reactivities/Domain/bin/Debug/netstandard2.0/Domain.dll
+/Users/nguyencong/Desktop/web/Web Development/ASP.NET Core/Reactivities/Domain/bin/Debug/netstandard2.0/Domain.pdb
+/Users/nguyencong/Desktop/web/Web Development/ASP.NET Core/Reactivities/Domain/obj/Debug/netstandard2.0/Domain.csprojAssemblyReference.cache
+/Users/nguyencong/Desktop/web/Web Development/ASP.NET Core/Reactivities/Domain/obj/Debug/netstandard2.0/Domain.AssemblyInfoInputs.cache
+/Users/nguyencong/Desktop/web/Web Development/ASP.NET Core/Reactivities/Domain/obj/Debug/netstandard2.0/Domain.AssemblyInfo.cs
+/Users/nguyencong/Desktop/web/Web Development/ASP.NET Core/Reactivities/Domain/obj/Debug/netstandard2.0/Domain.csproj.CoreCompileInputs.cache
+/Users/nguyencong/Desktop/web/Web Development/ASP.NET Core/Reactivities/Domain/obj/Debug/netstandard2.0/Domain.dll
+/Users/nguyencong/Desktop/web/Web Development/ASP.NET Core/Reactivities/Domain/obj/Debug/netstandard2.0/Domain.pdb
