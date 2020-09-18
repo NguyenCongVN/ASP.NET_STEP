@@ -4,10 +4,25 @@ import { IActivity } from "../../../app/models/activity";
 import ActivityList from "./ActivityList";
 import ActivityDetail from "../details/ActivityDetail";
 import ActivityForm from "../../form/ActivityForm";
-interface IProp {
+import { RootState } from "../../../redux/root.reducer";
+import { connect } from "react-redux";
+
+interface IState {
+  editMode?: boolean;
+  selectedActivity: IActivity | null;
+}
+
+interface IOwnProps {
   activities: IActivity[];
 }
-const ActivityDashboard = ({ activities }: IProp) => {
+
+type IProp = IState & IOwnProps;
+
+const ActivityDashboard = ({
+  activities,
+  editMode,
+  selectedActivity,
+}: IProp) => {
   return (
     <div>
       <Grid>
@@ -16,12 +31,19 @@ const ActivityDashboard = ({ activities }: IProp) => {
         </Grid.Column>
 
         <Grid.Column width={6}>
-          <ActivityDetail />
-          <ActivityForm />
+          {selectedActivity ? <ActivityDetail /> : null}
+          {editMode ? <ActivityForm /> : null}
         </Grid.Column>
       </Grid>
     </div>
   );
 };
 
-export default ActivityDashboard;
+const mapStateToProps = (state: RootState) => ({
+  editMode: state.activities.editMode,
+  selectedActivity: state.activities.selectedActivty,
+});
+
+export default connect<IState, any, IOwnProps, RootState>(mapStateToProps)(
+  ActivityDashboard
+);

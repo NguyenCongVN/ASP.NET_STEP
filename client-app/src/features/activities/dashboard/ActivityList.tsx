@@ -28,7 +28,11 @@ const ActivityList = ({ activities, selectActivity }: IProp) => {
           <Item key={activity.id}>
             <Item.Image
               size="tiny"
-              src="https://react.semantic-ui.com/images/wireframe/image.png"
+              src={
+                activity
+                  ? `/assets/categoryImages/${activity.category}.jpg`
+                  : "/assets/placeholder.png"
+              }
             />
 
             <Item.Content>

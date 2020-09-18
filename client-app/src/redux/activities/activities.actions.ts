@@ -1,6 +1,8 @@
 import {
   SelectActivity,
   SELECT_ACTIVITY,
+  SetEditMode,
+  SET_EDITMODE,
   UpdateActivities,
   UPDATE_ACTIVITIES,
 } from "./activities.types";
@@ -12,9 +14,16 @@ export function _UpdateActivities(activities: IActivity[]): UpdateActivities {
   };
 }
 
-export function _SelectActivity(activity: IActivity): SelectActivity {
+export function _SelectActivity(activity: IActivity | null): SelectActivity {
   return {
     type: SELECT_ACTIVITY,
     payload: activity,
+  };
+}
+
+export function _SetEditMode(editMode: boolean): SetEditMode {
+  return {
+    type: SET_EDITMODE,
+    payload: editMode,
   };
 }

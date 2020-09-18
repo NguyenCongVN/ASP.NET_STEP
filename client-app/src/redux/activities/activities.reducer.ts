@@ -1,12 +1,15 @@
+import { stat } from "fs";
 import {
   IActivitiesState,
   ActivitiesActionTypes,
   UPDATE_ACTIVITIES,
   SELECT_ACTIVITY,
+  SET_EDITMODE,
 } from "./activities.types";
 const INITIAL_STATE: IActivitiesState = {
   activities: [],
   selectedActivty: null,
+  editMode: false,
 };
 
 export const activitiesReducer = (
@@ -23,6 +26,11 @@ export const activitiesReducer = (
       return {
         ...state,
         selectedActivty: action.payload,
+      };
+    case SET_EDITMODE:
+      return {
+        ...state,
+        editMode: action.payload,
       };
     default:
       return state;

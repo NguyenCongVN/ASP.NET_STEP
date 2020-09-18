@@ -1,11 +1,12 @@
 import React from "react";
+import { withRouter, RouteComponentProps } from "react-router-dom";
 import { Button, Container, Menu } from "semantic-ui-react";
 
-const NavBar = () => {
+const NavBar = ({ history }: RouteComponentProps) => {
   return (
     <Menu fixed="top" inverted>
       <Container>
-        <Menu.Item header>
+        <Menu.Item header onClick={() => history.push("/")}>
           <img src="/assets/logo.png" alt="Logo" />
           Reactivities
         </Menu.Item>
@@ -18,4 +19,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default withRouter(NavBar);

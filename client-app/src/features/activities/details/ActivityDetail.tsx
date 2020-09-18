@@ -3,14 +3,26 @@ import { connect } from "react-redux";
 import { Button, Card, Icon, Image, Segment } from "semantic-ui-react";
 import { IActivity } from "../../../app/models/activity";
 import { RootState } from "../../../redux/root.reducer";
-
+import {
+  _SelectActivity,
+  _SetEditMode,
+} from "../../../redux/activities/activities.actions";
 interface StateProps {
   selectedActivity: IActivity | null;
 }
 
-type IProp = StateProps;
+interface DispatchProps {
+  setSelectedActivity: (activity: IActivity | null) => void;
+  setEditMode: (editMode: boolean) => void;
+}
 
-const ActivityDetail: React.FC<IProp> = ({ selectedActivity }) => {
+type IProp = StateProps & DispatchProps;
+
+const ActivityDetail: React.FC<IProp> = ({
+  selectedActivity,
+  setEditMode,
+  setSelectedActivity,
+}) => {
   return (
     <Card fluid>
       <Image
@@ -35,8 +47,23 @@ const ActivityDetail: React.FC<IProp> = ({ selectedActivity }) => {
       </Card.Content>
       <Card.Content extra>
         <Button.Group widths={2}>
-          <Button basic color="blue" content="Edit" />
-          <Button basic color="grey" content="Cancel" />
+          <Button
+            basic
+            color="blue"
+            content="Edit"
+            onClick={() => {
+              setEditMode(true);
+            }}
+          />
+          <Button
+            basic
+            color="grey"
+            content="Cancel"
+            onClick={() => {
+              setSelectedActivity(null);
+              setEditMode(false);
+            }}
+          />
         </Button.Group>
       </Card.Content>
     </Card>
@@ -47,7 +74,13 @@ const mapStateToProp = (rootState: RootState) => ({
   selectedActivity: rootState.activities.selectedActivty,
 });
 
-export default connect<StateProps, any, any, any>(
+const mapDispatchToProp = (dispatch: any) => ({
+  setEditMode: (editMode: boolean) => dispatch(_SetEditMode(editMode)),
+  setSelectedActivity: (activity: IActivity | null) =>
+    dispatch(_SelectActivity(activity)),
+});
+
+export default connect<StateProps, DispatchProps, any, RootState>(
   mapStateToProp,
-  null
+  mapDispatchToProp
 )(ActivityDetail);
