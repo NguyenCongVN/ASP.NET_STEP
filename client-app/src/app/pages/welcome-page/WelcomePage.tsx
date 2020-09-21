@@ -1,6 +1,7 @@
 import React from "react";
+import { RouteComponentProps, withRouter } from "react-router-dom";
 import "./sass/main.scss";
-export const WelcomePage = () => (
+const WelcomePage = ({ history }: RouteComponentProps) => (
   <div>
     <div className="navigation">
       <input
@@ -18,22 +19,22 @@ export const WelcomePage = () => (
       <nav className="navigation__nav">
         <ul className="navigation__list">
           <li className="navigation__item">
-            <a href="#" className="navigation__link">
+            <a href="/" className="navigation__link">
               <span>01</span>Đăng Nhập
             </a>
           </li>
           <li className="navigation__item">
-            <a href="#" className="navigation__link">
+            <a href="/" className="navigation__link">
               <span>02</span>Đăng Kí
             </a>
           </li>
           <li className="navigation__item">
-            <a href="#" className="navigation__link">
+            <a href="/" className="navigation__link">
               <span>03</span>Giới Thiệu
             </a>
           </li>
           <li className="navigation__item">
-            <a href="#" className="navigation__link">
+            <a href="/" className="navigation__link">
               <span>04</span>Về Chúng Tôi
             </a>
           </li>
@@ -54,7 +55,7 @@ export const WelcomePage = () => (
           </span>
         </h1>
 
-        <a href="#section-tours" className="btn btn--white btn--animated">
+        <a href="/" className="btn btn--white btn--animated">
           Khám phá ngay
         </a>
       </div>
@@ -261,27 +262,27 @@ export const WelcomePage = () => (
 
                 <div className="form__group">
                   <input
-                    type="text"
+                    type="email"
                     className="form__input"
-                    placeholder="Full name"
-                    id="name"
+                    placeholder="Email"
+                    id="email"
                     required
                   />
-                  <label htmlFor="name" className="form__label">
-                    Full name
+                  <label htmlFor="email" className="form__label">
+                    Email
                   </label>
                 </div>
 
                 <div className="form__group">
                   <input
-                    type="email"
+                    type="password"
                     className="form__input"
-                    placeholder="Email address"
-                    id="email"
+                    placeholder="Password"
+                    id="password"
                     required
                   />
-                  <label htmlFor="email" className="form__label">
-                    Email address
+                  <label htmlFor="password" className="form__label">
+                    Password
                   </label>
                 </div>
 
@@ -295,7 +296,7 @@ export const WelcomePage = () => (
                     />
                     <label htmlFor="small" className="form__radio-label">
                       <span className="form__radio-button"></span>
-                      Small tour group
+                      Đăng kí
                     </label>
                   </div>
 
@@ -308,13 +309,20 @@ export const WelcomePage = () => (
                     />
                     <label htmlFor="large" className="form__radio-label">
                       <span className="form__radio-button"></span>
-                      Large tour group
+                      Đăng nhập
                     </label>
                   </div>
                 </div>
 
                 <div className="form__group">
-                  <button className="btn btn--green">Next step &rarr;</button>
+                  <button
+                    className="btn btn--green"
+                    onClick={() => {
+                      history.push("/");
+                    }}
+                  >
+                    Tiếp theo &rarr;
+                  </button>
                 </div>
               </form>
             </div>
@@ -366,3 +374,4 @@ export const WelcomePage = () => (
     </footer>
   </div>
 );
+export default withRouter(WelcomePage);
