@@ -24,7 +24,7 @@ const ActivityDashboard = ({
   selectedActivity,
 }: IProp) => {
   return (
-    <div>
+    <div style={{ fontSize: "1.4rem" }}>
       <Grid>
         <Grid.Column width={10}>
           <ActivityList activities={activities} />

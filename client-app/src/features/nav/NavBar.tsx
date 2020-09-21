@@ -4,7 +4,7 @@ import { Button, Container, Menu } from "semantic-ui-react";
 
 const NavBar = ({ history }: RouteComponentProps) => {
   return (
-    <Menu fixed="top" inverted>
+    <Menu fixed="top" inverted style={{ fontSize: "1.4rem" }}>
       <Container>
         <Menu.Item header onClick={() => history.push("/")}>
           <img src="/assets/logo.png" alt="Logo" />

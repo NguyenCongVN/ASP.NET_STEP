@@ -1,6 +1,6 @@
 import React from "react";
 import "./sass/main.scss";
-export const HomePage = () => (
+export const WelcomePage = () => (
   <div>
     <div className="navigation">
       <input

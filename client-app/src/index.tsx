@@ -5,13 +5,13 @@ import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
-import { HomePage } from "./app/pages/homepage/HomePage";
+import { WelcomePage } from "./app/pages/welcome-page/WelcomePage";
 ReactDOM.render(
   <Provider store={store}>
     <Router>
       <div>
         <Switch>
-          <Route path="/home" component={HomePage} />
+          <Route path="/welcome" component={WelcomePage} />
           <Route path="/" component={App} />
         </Switch>
       </div>
